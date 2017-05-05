@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/cs_activity_padding">
+
+    <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Device's Default Font (Normal)"
+      android:textColor="@color/c_FF9800"
+      android:textColorHint="@color/c_FF9800"/>
+
+    <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Device's Default Font (Italic)"
+      android:textColor="@color/c_FF9800"
+      android:textColorHint="@color/c_FF9800"
+      android:textStyle="italic"/>
+
+    <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Device's Default Font (Bold)"
+      android:textColor="@color/c_FF9800"
+      android:textColorHint="@color/c_FF9800"
+      android:textStyle="bold"/>
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_margin="4dp"
+      android:background="@color/c_E0E0E0"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Custom Font (Helvetica-Normal)"
+      android:textColor="@color/c_009688"
+      android:textColorHint="@color/c_009688"
+      app:hkCustomFont="Helvetica-Normal"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Custom Font (Helvetica-Light)"
+      android:textColor="@color/c_009688"
+      app:hkCustomFont="Helvetica-Light"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Custom Font (Helvetica-Bold)"
+      android:textColor="@color/c_009688"
+      app:hkCustomFont="Helvetica-Bold"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Custom Font (Helvetica-Oblique)"
+      android:textColor="@color/c_009688"
+      app:hkCustomFont="Helvetica-Oblique"/>
+
+    <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_margin="4dp"
+      android:background="@color/c_E0E0E0"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="4dp"
+      android:text="Fonts below are included in commonslib"
+      android:textColor="@color/c_white"
+      android:background="@color/c_FF5722"
+      android:textSize="11sp"
+      app:hkCustomFont="Roboto-Normal"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Roboto-Black"
+      android:textColor="@color/c_2196F3"
+      android:textColorHint="@color/c_2196F3"
+      app:hkCustomFont="Roboto-Black"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Roboto-BlackItalic"
+      android:textColor="@color/c_2196F3"
+      app:hkCustomFont="Roboto-BlackItalic"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Roboto-Bold"
+      android:textColor="@color/c_2196F3"
+      android:textColorHint="@color/c_2196F3"
+      app:hkCustomFont="Roboto-Bold"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Roboto-BoldItalic"
+      android:textColor="@color/c_2196F3"
+      app:hkCustomFont="Roboto-BoldItalic"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Roboto-Italic"
+      android:textColor="@color/c_2196F3"
+      android:textColorHint="@color/c_2196F3"
+      app:hkCustomFont="Roboto-Italic"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Roboto-Light"
+      android:textColor="@color/c_2196F3"
+      android:textColorHint="@color/c_2196F3"
+      app:hkCustomFont="Roboto-Light"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Roboto-LightItalic"
+      android:textColor="@color/c_2196F3"
+      android:textColorHint="@color/c_2196F3"
+      app:hkCustomFont="Roboto-LightItalic"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Roboto-Medium"
+      android:textColor="@color/c_2196F3"
+      android:textColorHint="@color/c_2196F3"
+      app:hkCustomFont="Roboto-Medium"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Roboto-MediumItalic"
+      android:textColor="@color/c_2196F3"
+      android:textColorHint="@color/c_2196F3"
+      app:hkCustomFont="Roboto-MediumItalic"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Roboto-Regular"
+      android:textColor="@color/c_2196F3"
+      android:textColorHint="@color/c_2196F3"
+      app:hkCustomFont="Roboto-Regular"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Roboto-Thin"
+      android:textColor="@color/c_2196F3"
+      android:textColorHint="@color/c_2196F3"
+      app:hkCustomFont="Roboto-Thin"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Roboto-ThinItalic"
+      android:textColor="@color/c_2196F3"
+      android:textColorHint="@color/c_2196F3"
+      app:hkCustomFont="Roboto-ThinItalic"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="RobotoCondensed-Bold"
+      android:textColor="@color/c_2196F3"
+      android:textColorHint="@color/c_2196F3"
+      app:hkCustomFont="RobotoCondensed-Bold"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="RobotoCondensed-BoldItalic"
+      android:textColor="@color/c_2196F3"
+      android:textColorHint="@color/c_2196F3"
+      app:hkCustomFont="RobotoCondensed-BoldItalic"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="RobotoCondensed-Italic"
+      android:textColor="@color/c_2196F3"
+      android:textColorHint="@color/c_2196F3"
+      app:hkCustomFont="RobotoCondensed-Italic"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="RobotoCondensed-Light"
+      android:textColor="@color/c_2196F3"
+      android:textColorHint="@color/c_2196F3"
+      app:hkCustomFont="RobotoCondensed-Light"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="RobotoCondensed-LightItalic"
+      android:textColor="@color/c_2196F3"
+      android:textColorHint="@color/c_2196F3"
+      app:hkCustomFont="RobotoCondensed-LightItalic"/>
+
+    <com.hrskrs.commonslib.views.HKEditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="RobotoCondensed-Regular"
+      android:textColor="@color/c_2196F3"
+      android:textColorHint="@color/c_2196F3"
+      app:hkCustomFont="RobotoCondensed-Regular"/>
+
+  </LinearLayout>
+</ScrollView>

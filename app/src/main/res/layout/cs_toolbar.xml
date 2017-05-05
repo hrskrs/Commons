@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+  android:id="@+id/cs_toolbar_container"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/colorPrimary">
+
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/cs_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:gravity="center"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="@style/AppTheme">
+
+    <com.hrskrs.commonslib.views.HKTextView
+      android:id="@+id/cs_toolbar_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_vertical"
+      android:textColor="@color/c_black"
+      android:textSize="@dimen/cs_text_size_medium"
+      tools:text="Toolbar"/>
+
+  </android.support.v7.widget.Toolbar>
+
+  <ImageView
+    android:id="@+id/cs_toolbar_logo"
+    android:layout_width="wrap_content"
+    android:layout_height="16dp"
+    android:layout_gravity="center"
+    tools:src="@android:drawable/ic_media_play"/>
+
+</FrameLayout>

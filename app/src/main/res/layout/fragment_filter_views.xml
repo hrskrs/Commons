@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:padding="@dimen/cs_activity_padding">
+
+  <com.hrskrs.commonslib.views.HKTextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/colorAccent"
+    android:gravity="center"
+    android:padding="10dp"
+    android:text="HKCreditCardEditText"
+    android:textColor="@color/c_white" />
+
+  <com.hrskrs.commonslib.views.HKCreditCardEditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="try 4747 for visa"
+    app:hkCustomFont="Roboto-Light"
+    app:hkDivider=" "
+    app:hkType="CC_NO" />
+
+  <com.hrskrs.commonslib.views.HKCreditCardEditText
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:drawableRight="@drawable/ic_cc_date"
+    app:hkDivider="-"
+    app:hkType="CC_DATE" />
+
+
+  <com.hrskrs.commonslib.views.HKCreditCardEditText
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:drawableRight="@drawable/ic_cc_cvc"
+    app:hkType="CC_CVC" />
+
+  <com.hrskrs.commonslib.views.HKTextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="center"
+    android:padding="10dp"
+    android:text="HKCreditCardEditTextAnim"
+    android:textColor="@color/c_white" />
+
+  <com.hrskrs.commonslib.views.HKCreditCardEditTextAnim
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Credit Card Number"
+    app:hkCustomFont="Roboto-Light"
+    app:hkDivider=" "
+    app:hkType="CC_NO" />
+
+  <com.hrskrs.commonslib.views.HKCreditCardEditTextAnim
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:hint="Expiration Date"
+    android:drawableRight="@drawable/ic_cc_date"
+    app:hkDivider="/"
+    app:hkType="CC_DATE" />
+
+  <com.hrskrs.commonslib.views.HKCreditCardEditTextAnim
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:hint="CVC"
+    android:drawableRight="@drawable/ic_cc_cvc"
+    app:hkType="CC_CVC" />
+
+</LinearLayout>

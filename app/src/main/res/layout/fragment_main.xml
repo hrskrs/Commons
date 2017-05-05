@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:padding="@dimen/cs_activity_padding">
+
+  <com.hrskrs.commonslib.views.HKButton
+    android:id="@+id/custom_fonts_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Custom Fonts"/>
+
+  <com.hrskrs.commonslib.views.HKButton
+    android:id="@+id/filter_views_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Masked Views"/>
+
+</LinearLayout>

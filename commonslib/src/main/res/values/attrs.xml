@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="HKViewAttrs">
+    <attr name="hkCustomFont" format="string" />
+  </declare-styleable>
+
+  <declare-styleable name="HKViewCreditCardAttrs">
+    <attr name="hkType" format="enum">
+      <enum name="CC_NO" value="0" />
+      <enum name="CC_DATE" value="1" />
+      <enum name="CC_CVC" value="2" />
+    </attr>
+    <attr name="hkDivider" format="string" />
+  </declare-styleable>
+
+  <declare-styleable name="HKFloatingViewAttrs">
+    <attr name="android:gravity" />
+  </declare-styleable>
+</resources>
