@@ -31,7 +31,12 @@ android {
 
   signingConfigs{
     releaseSign{
-      //TODO: add apk configurations
+      Properties properties = new Properties()
+      properties.load(project.rootProject.file('local.properties').newDataInputStream())
+      storeFile file(properties.getProperty('STORE_FILE'))
+      storePassword properties.getProperty('STORE_PASSWORD')
+      keyAlias properties.getProperty('KEY_ALIAS')
+      keyPassword properties.getProperty('KEY_PASSWORD')
     }
   }
 
@@ -49,7 +54,7 @@ android {
 
     release {
       minifyEnabled true
-      signingConfig signingConfigs.debug
+      signingConfig signingConfigs.releaseSign
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
       //Include all files in proguardRules folder
       proguardFiles fileTree(dir: "../proguardRules", include: ["*.pro"]).asList().toArray()
