@@ -31,21 +31,12 @@ android {
       debuggable true
       minifyEnabled false
       signingConfig signingConfigs.debug
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-      //Include all files in proguardRules folder
-      proguardFiles fileTree(dir: "../proguardRules", include: ["*.pro"]).asList().toArray()
-
-      testProguardFile 'proguard-rules.pro'
     }
 
     release {
-      minifyEnabled true
+      minifyEnabled false
       signingConfig signingConfigs.releaseSign
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-      //Include all files in proguardRules folder
-      proguardFiles fileTree(dir: "../proguardRules", include: ["*.pro"]).asList().toArray()
-
-      testProguardFile 'proguard-rules.pro'
     }
   }
 
