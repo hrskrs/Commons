@@ -8,33 +8,11 @@ android {
   compileSdkVersion rootProject.ext.compileSdkVersion
   buildToolsVersion rootProject.ext.buildToolsVersion
 
-  def BUILD_VERSION_FILE_NAME = '../build.properties'
-  def BUILD_VERSION_PARAMETER = 'BUILD_VERSION'
-  //Increment versionBuild on every build
-  def versionPropsFile = file(BUILD_VERSION_FILE_NAME)
-  if (versionPropsFile.canRead()) {
-    Properties versionProps = new Properties()
-    versionProps.load(new FileInputStream(versionPropsFile))
-    def versionBuild = versionProps[BUILD_VERSION_PARAMETER].toInteger() + 1
-    versionProps[BUILD_VERSION_PARAMETER] = versionBuild.toString()
-    versionProps.store(versionPropsFile.newWriter(), null)
-
-    defaultConfig {
-      minSdkVersion 9
-      targetSdkVersion rootProject.ext.targetSdkVersion
-      versionCode = rootProject.ext.versionCode + versionBuild
-      versionName = rootProject.ext.versionName
-
-      testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
-  } else {
-    throw new GradleException("Could not read " + BUILD_VERSION_FILE_NAME + " file!")
-  }
-
   defaultConfig {
-    consumerProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-    //Include all files in proguardRules folder
-    consumerProguardFiles fileTree(dir: "../proguardRules", include: ["*.pro"]).asList().toArray()
+    minSdkVersion 9
+    targetSdkVersion rootProject.ext.targetSdkVersion
+    versionCode = rootProject.ext.versionCode
+    versionName = rootProject.ext.versionName
   }
 
   compileOptions {
@@ -44,31 +22,7 @@ android {
 
 }
 
-task sourcesJar(type: Jar) {
-  from android.sourceSets.main.java.srcDirs
-  classifier = 'sources'
-}
-
-task javadoc(type: Javadoc) {
-  failOnError false
-  source = android.sourceSets.main.java.sourceFiles
-  classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-  classifier = 'javadoc'
-  from javadoc.destinationDir
-}
-
-artifacts {
-  archives sourcesJar
-  archives javadocJar
-}
-
-
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
-
   compile "com.android.support:appcompat-v7:$supportLibVersion"
   compile "com.android.support:design:$supportLibVersion"
 }

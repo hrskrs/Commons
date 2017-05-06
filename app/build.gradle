@@ -5,32 +5,18 @@ android {
   compileSdkVersion rootProject.ext.compileSdkVersion
   buildToolsVersion rootProject.ext.buildToolsVersion
 
-  def BUILD_VERSION_FILE_NAME = '../build.properties'
-  def BUILD_VERSION_PARAMETER = 'BUILD_VERSION'
-  //Increment versionBuild on every build
-  def versionPropsFile = file(BUILD_VERSION_FILE_NAME)
-  if (versionPropsFile.canRead()) {
-    Properties versionProps = new Properties()
-    versionProps.load(new FileInputStream(versionPropsFile))
-    def versionBuild = versionProps[BUILD_VERSION_PARAMETER].toInteger() + 1
-    versionProps[BUILD_VERSION_PARAMETER] = versionBuild.toString()
-    versionProps.store(versionPropsFile.newWriter(), null)
+  defaultConfig {
+    applicationId rootProject.ext.applicationId
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.targetSdkVersion
+    versionCode = rootProject.ext.versionCode
+    versionName = rootProject.ext.versionName
 
-    defaultConfig {
-      applicationId rootProject.ext.applicationId
-      minSdkVersion rootProject.ext.minSdkVersion
-      targetSdkVersion rootProject.ext.targetSdkVersion
-      versionCode = rootProject.ext.versionCode + versionBuild
-      versionName = rootProject.ext.versionName
-
-      testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
-  } else {
-    throw new GradleException("Could not read " + BUILD_VERSION_FILE_NAME + " file!")
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
 
-  signingConfigs{
-    releaseSign{
+  signingConfigs {
+    releaseSign {
       Properties properties = new Properties()
       properties.load(project.rootProject.file('local.properties').newDataInputStream())
       storeFile file(properties.getProperty('STORE_FILE'))
